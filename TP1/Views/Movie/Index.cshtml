@@ -1,0 +1,24 @@
+﻿@model IEnumerable<TP1.Models.Movie>
+
+<div class="container">
+    <h1>Movies List</h1>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Actions</th>
+        </tr>
+
+        @foreach (var movie in Model)
+        {
+            <tr>
+                <td>@movie.Id</td>
+                <td>@movie.Name</td>
+                <td>
+                    <a class="button" href="/Movie/MovieDetails/@movie.Id">Details</a>
+                </td>
+            </tr>
+        }
+    </table>
+</div>
