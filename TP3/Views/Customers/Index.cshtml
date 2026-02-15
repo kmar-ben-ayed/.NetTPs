@@ -77,6 +77,7 @@
                             <th>Téléphone</th>
                             <th>Type</th>
                             <th>Réduction</th>
+                            <th>Newsletter</th>
                             <th>Date d'inscription</th>
                             <th class="modern-table-actions">Actions</th>
                         </tr>
@@ -103,6 +104,16 @@
                                     <span class="modern-tag modern-tag-info">
                                         @customer.MembershipType?.DiscountRate%
                                     </span>
+                                </td>
+                                <td>
+                                    @if (customer.IsSubscribedToNewsletter)
+                                    {
+                                        <span class="modern-tag modern-tag-success">✓ Oui</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="modern-tag modern-tag-default">✕ Non</span>
+                                    }
                                 </td>
                                 <td class="modern-table-date">
                                     @customer.RegistrationDate.ToString("dd/MM/yyyy")

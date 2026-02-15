@@ -97,6 +97,15 @@
                 </div>
             </div>
 
+            <!-- Stock -->
+            <div class="modern-form-group">
+                <label asp-for="Movie.Stock" class="modern-form-label">
+                    Stock (0-100)
+                </label>
+                <input asp-for="Movie.Stock" type="number" min="0" max="100" class="modern-input" placeholder="10" />
+                <span asp-validation-for="Movie.Stock" class="modern-error"></span>
+            </div>
+
             <!-- Movie Image -->
             <div class="modern-form-group">
                 <label asp-for="Photo" class="modern-form-label">

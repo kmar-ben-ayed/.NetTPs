@@ -83,6 +83,25 @@ namespace TP3.Data
 
                     if (movies != null && movies.Any())
                     {
+                        for (int i = 0; i < movies.Count; i++)
+                        {
+                            // 1. Ensure ID is present (starts at 1)
+                            if (movies[i].Id == 0) movies[i].Id = i + 1;
+
+                            // 2. Provide fallback for Description
+                            if (string.IsNullOrEmpty(movies[i].Description))
+                                movies[i].Description = "No description provided.";
+
+                            // 3. Provide fallback for ImageFile
+                            if (string.IsNullOrEmpty(movies[i].ImageFile))
+                                movies[i].ImageFile = "default.jpg";
+
+                            // 4. Ensure GenreId is valid (defaults to 1 - Action)
+                            if (movies[i].GenreId == 0) movies[i].GenreId = 1;
+
+                            // 5. Explicitly set Stock if it's missing (defaults to 0)
+                            // (This ensures your new column actually gets data)
+                        }
                         modelBuilder.Entity<Movie>().HasData(movies);
                     }
                 }

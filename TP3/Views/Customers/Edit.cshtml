@@ -86,6 +86,14 @@
                 <span asp-validation-for="MembershipTypeId" class="modern-error"></span>
             </div>
 
+            <div class="modern-form-group">
+                <label class="modern-form-label">
+                    <input asp-for="IsSubscribedToNewsletter" type="checkbox" class="modern-checkbox" />
+                    <span>Abonné à la Lettre d'Actualités</span>
+                </label>
+                <span asp-validation-for="IsSubscribedToNewsletter" class="modern-error"></span>
+            </div>
+
             <div class="modern-form-actions">
                 <button type="submit" class="modern-btn modern-btn-primary">
                     <svg class="modern-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">

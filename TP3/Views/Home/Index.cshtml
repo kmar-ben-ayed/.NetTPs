@@ -49,6 +49,30 @@
                 Accéder aux Types
             </a>
         </div>
+
+        <!-- Services LINQ -->
+        <div class="modern-dashboard-card modern-services-card">
+            <div class="modern-card-icon">⚙️</div>
+            <h3 class="modern-card-title">Services LINQ</h3>
+            <p class="modern-card-description">
+                Testez les 6 méthodes du service MovieService avec Entity Framework Core.
+            </p>
+            <a href="@Url.Action("Index", "Services")" class="modern-btn modern-btn-secondary modern-btn-block">
+                Accéder aux Services
+            </a>
+        </div>
+
+        <!-- Repository Pattern -->
+        <div class="modern-dashboard-card modern-repository-card">
+            <div class="modern-card-icon">📚</div>
+            <h3 class="modern-card-title">Repository Pattern</h3>
+            <p class="modern-card-description">
+                Découvrez l'implémentation du Repository Pattern avec Unit of Work pour l'accès aux données.
+            </p>
+            <a href="@Url.Action("Index", "Repository")" class="modern-btn modern-btn-repository modern-btn-block">
+                Accéder au Repository
+            </a>
+        </div>
     </div>
 </div>
 
@@ -204,6 +228,36 @@
             box-shadow: 0 8px 25px rgba(67, 97, 238, 0.3);
         }
 
+        .modern-btn-secondary {
+            background: linear-gradient(135deg, #64748b 0%, #475569 100%);
+            color: white;
+        }
+
+        .modern-btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(100, 116, 139, 0.3);
+        }
+
+        .modern-services-card {
+            border-color: #64748b;
+            border: 2px solid #64748b;
+        }
+
+        .modern-repository-card {
+            border-color: #8b5cf6;
+            border: 2px solid #8b5cf6;
+        }
+
+        .modern-btn-repository {
+            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+            color: white;
+        }
+
+        .modern-btn-repository:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3);
+        }
+
         /* Responsive */
         @@media (max-width: 768px) {
             .modern-hero {
@@ -264,6 +318,14 @@
 
         .modern-dashboard-card:nth-child(3) {
             animation-delay: 0.3s;
+        }
+
+        .modern-dashboard-card:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .modern-dashboard-card:nth-child(5) {
+            animation-delay: 0.5s;
         }
     </style>
 }

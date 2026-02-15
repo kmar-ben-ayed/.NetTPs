@@ -47,5 +47,9 @@ namespace TP3.Models
         [Display(Name = "Date d'Ajout")]
         [DataType(DataType.DateTime)]
         public DateTime DateAjoutMovie { get; set; } = DateTime.Now;
+        
+        [Range(0, 100, ErrorMessage = "Le stock doit être entre 0 et 100")]
+        [Display(Name = "Stock")]
+        public int Stock { get; set; }
     }
 }

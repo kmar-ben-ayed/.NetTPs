@@ -36,6 +36,9 @@ namespace TP3.Models
         [DataType(DataType.DateTime)]
         [Display(Name = "Date d'Inscription")]
         public DateTime RegistrationDate { get; set; } = DateTime.Now;
+        
+        [Display(Name = "Abonné à la Lettre d'Actualités")]
+        public bool IsSubscribedToNewsletter { get; set; } = false;
 
         // Foreign Key
         [ForeignKey("MembershipTypeId")]
